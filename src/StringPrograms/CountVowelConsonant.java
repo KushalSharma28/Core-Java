@@ -1,11 +1,10 @@
-package InterviewPrograms;
+package StringPrograms;
 
 import java.util.Scanner;
 
-public class VowelConsonant 
-{
-	public static void main(String[] args) 
-	{
+public class CountVowelConsonant {
+
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
         
         System.out.print("Enter a string: ");
@@ -39,5 +38,7 @@ public class VowelConsonant
         System.out.println("Number of consonants: " + consonantCount);
         
         scanner.close();
+
 	}
+
 }
