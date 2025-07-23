@@ -2,7 +2,7 @@ package InterviewPrograms;
 
 public class StringPermutations 
 {
-    public static void printPermutations(String str, String currentPermutation) 
+    /*public static void printPermutations(String str, String currentPermutation) 
     {
         // Base case: If the string is empty, a permutation is found
         if (str.length() == 0) 
@@ -26,5 +26,27 @@ public class StringPermutations
     {
         String input = "ABC";
         printPermutations(input, ""); // Start with an empty current permutation
+    }
+    */
+	
+	public static void main(String[] args)
+    {
+        String str= "hello";
+        permute(str, "");
+    }
+    public static void permute(String str, String prefix)
+    {
+        if (str.length() == 0)
+        {
+            System.out.println(prefix);
+        }
+        else
+        {
+            for (int i=0;i<str.length();i++)
+            {
+                String rem = str.substring(0,i) + str.substring(i+1);
+                permute(rem,prefix + str.charAt(i));
+            }
+        }
     }
 }
